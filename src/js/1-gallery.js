@@ -78,11 +78,10 @@ const createMarcup = images.map(image => `<li class="gallery-item">
   </a>
 </li>`).join("");
 galleryContainer.insertAdjacentHTML("beforeend", createMarcup);
-// Описаний в документації
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
 
+
+import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
 
 
  
