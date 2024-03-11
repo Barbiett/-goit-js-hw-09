@@ -69,7 +69,7 @@ const images = [
 
 const galleryContainer = document.querySelector(".gallery");
 const createMarcup = images.map(image => `<li class="gallery-item">
-  <a class="gallery-link" href="large-image.jpg">
+  <a class="gallery-link" href="${image.original}">
     <img
       class="gallery-image"
       src="${image.preview}"
@@ -80,8 +80,6 @@ const createMarcup = images.map(image => `<li class="gallery-item">
 galleryContainer.insertAdjacentHTML("beforeend", createMarcup);
 
 
-import SimpleLightbox from "simplelightbox";
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
-
-
- 
+ import SimpleLightbox from "simplelightbox";
+const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+import "simplelightbox/dist/simple-lightbox.min.css";

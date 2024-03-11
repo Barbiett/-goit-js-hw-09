@@ -23,3 +23,21 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.gallery {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+img {
+  display: block;
+  height: auto;
+  width: 360px;
+  object-fit: cover;
+}
+body {
+  margin: 16px;
+  line-height: 1.5;
+  max-width: 1440px;
+  display: flex;
+}
