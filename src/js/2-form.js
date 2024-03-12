@@ -15,7 +15,7 @@ if (dataFromLS) {
 }
 function handleSubmit(event) {
     event.preventDefault();
-    console.log({ message: message.value, email: email.value })
+    console.log({ email: email.value, message: message.value })
     localStorage.removeItem(storageKey);
     form.reset();
 }

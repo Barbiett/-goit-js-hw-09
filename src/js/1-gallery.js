@@ -81,5 +81,5 @@ galleryContainer.insertAdjacentHTML("beforeend", createMarcup);
 
 
  import SimpleLightbox from "simplelightbox";
-const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+const lightbox = new SimpleLightbox('.gallery a',);
 import "simplelightbox/dist/simple-lightbox.min.css";
