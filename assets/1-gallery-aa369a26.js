@@ -6,5 +6,5 @@ import{S as o}from"./vendor-870f0eb5.js";const i=[{preview:"https://cdn.pixabay.
       alt="${p.description}"
     />
   </a>
-</li>`).join("");a.insertAdjacentHTML("beforeend",t);new o(".gallery a",{});
-//# sourceMappingURL=1-gallery-ec5dd13e.js.map
+</li>`).join("");a.insertAdjacentHTML("beforeend",t);new o(".gallery a");
+//# sourceMappingURL=1-gallery-aa369a26.js.map
