@@ -1,5 +1,7 @@
 
+import "simplelightbox/dist/simple-lightbox.min.css";
 
+import SimpleLightbox from "simplelightbox";
 const images = [
   {
     preview:
@@ -80,6 +82,4 @@ const createMarcup = images.map(image => `<li class="gallery-item">
 galleryContainer.insertAdjacentHTML("beforeend", createMarcup);
 
 
- import SimpleLightbox from "simplelightbox";
-const lightbox = new SimpleLightbox('.gallery a',);
-import "simplelightbox/dist/simple-lightbox.min.css";
+const lightbox = new SimpleLightbox('.gallery a',{ captionsData: 'alt', captionDelay: 250 });

@@ -8,18 +8,25 @@ if (dataFromLS) {
     email.value = dataFromLS.email
 }
   function handleInput(event) {
-    const currentMessage = message.value.trim();
-    const currentEmail = email.value.trim();
-    const dataToLS = JSON.stringify({email: currentEmail, message: currentMessage });
+    const currentMessageInput = message.value.trim();
+    const currentEmailInput = email.value.trim();
+    const dataToLS = JSON.stringify({email: currentEmailInput, message: currentMessageInput });
     localStorage.setItem(storageKey, dataToLS);
 }
 function handleSubmit(event) {
     event.preventDefault();
-    console.log({ email: email.value, message: message.value })
+    const currentMessageSubmit = message.value.trim();
+    const currentEmailSubmit = email.value.trim();
+    if (!currentEmailSubmit || !currentMessageSubmit) {
+        alert("No info")
+        return
+    }
+    console.log({ email: currentEmailSubmit, message: currentMessageSubmit })
     localStorage.removeItem(storageKey);
     form.reset();
 }
 form.addEventListener("input", handleInput);
 
 form.addEventListener("submit", handleSubmit);
+
 
