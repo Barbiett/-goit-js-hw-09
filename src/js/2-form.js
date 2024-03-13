@@ -1,8 +1,8 @@
 const storageKey = "feedback-form-state";
 const form = document.querySelector(".feedback-form");
 const dataFromLS = JSON.parse(localStorage.getItem(storageKey));
-const message = form.elements.message;
-const email = form.elements.email
+const message = form?.elements.message;
+const email = form?.elements.email
 if (dataFromLS) {
     message.value = dataFromLS.message
     email.value = dataFromLS.email
@@ -18,15 +18,15 @@ function handleSubmit(event) {
     const currentMessageSubmit = message.value.trim();
     const currentEmailSubmit = email.value.trim();
     if (!currentEmailSubmit || !currentMessageSubmit) {
-        alert("No info")
+        alert("Будь ласка, заповніть обидва поля - електронну адресу та повідомлення.")
         return
     }
     console.log({ email: currentEmailSubmit, message: currentMessageSubmit })
     localStorage.removeItem(storageKey);
     form.reset();
 }
-form.addEventListener("input", handleInput);
+form?.addEventListener("input", handleInput);
 
-form.addEventListener("submit", handleSubmit);
+form?.addEventListener("submit", handleSubmit);
 
 

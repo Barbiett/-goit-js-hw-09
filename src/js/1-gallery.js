@@ -79,7 +79,7 @@ const createMarcup = images.map(image => `<li class="gallery-item">
     />
   </a>
 </li>`).join("");
-galleryContainer.insertAdjacentHTML("beforeend", createMarcup);
+galleryContainer?.insertAdjacentHTML("beforeend", createMarcup);
 
 
 const lightbox = new SimpleLightbox('.gallery a',{ captionsData: 'alt', captionDelay: 250 });
